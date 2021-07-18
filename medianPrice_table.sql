@@ -1,7 +1,7 @@
 --DROP TABLE MedianPrice
 
 CREATE TABLE MedianPrice (
-	id INT PRIMARY KEY,
+	index INT PRIMARY KEY,
 	month_year VARCHAR,
 	ca INT,
 	alameda INT,
