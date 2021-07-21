@@ -19,4 +19,6 @@ var myMap = L.map("map", {
   
   streetmap.addTo(myMap);
   var queryUrl = "https://services6.arcgis.com/snwvZ3EmaoXJiugR/arcgis/rest/services/BOE_citycounty/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json";
-  d3.json(queryUrl, function(data) 
+  d3.json(queryUrl, function(data) {
+      
+  }
