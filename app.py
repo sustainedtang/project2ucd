@@ -1,3 +1,5 @@
+#%%
+    
 import psycopg2
 from sqlalchemy import create_engine
 import pandas as pd
@@ -13,15 +15,32 @@ def index():
     welcome_msg = 'Welcome to your Flask App. Be sure to navigate to an endpoint.'
     return(welcome_msg)
 
-@app.route("/medianPcoor.csv")
+@app.route("/medianPcoor")
 def medianCoor():
     conn = engine.connect()
-    results_df = pd.read_sql('SELECT * FROM MedianPrice', conn)
+    results_df = pd.read_sql('SELECT * FROM medianPcoor', conn)
     results_json = results_df.to_json(orient='records')
     print(results_json)
     conn.close()
     return results_json
 
+@app.route("/percentChgCoor")
+def percentCoor():
+    conn = engine.connect()
+    results_df = pd.read_sql('SELECT * FROM percentChgCoor', conn)
+    results_json = results_df.to_json(orient='records')
+    print(results_json)
+    conn.close()
+    return results_json    
+
+@app.route("/population")
+def population():
+    conn = engine.connect()
+    results_df = pd.read_sql('SELECT * FROM countycoor', conn)
+    results_json = results_df.to_json(orient='records')
+    print(results_json)
+    conn.close()
+    return results_json 
+
 if __name__ == '__main__':
     app.run(debug=True)
-
