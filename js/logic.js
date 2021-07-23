@@ -1,7 +1,7 @@
 // Creating map object
 var myMap = L.map("map", {
   center: [38.44, -121.344],
-  zoom: 11
+  zoom: 7
 });
 
 // Adding tile layer
@@ -21,3 +21,4 @@ d3.json(cagovlink).then(function(data) {
   // Creating a GeoJSON layer with the retrieved data
   L.geoJson(data).addTo(myMap);
 });
+
