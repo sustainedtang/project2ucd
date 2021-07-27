@@ -77,5 +77,5 @@ d3.json('/percentChgCoor').then(data => {
     
     Plotly.newPlot('viz1', trace_data, layout);
 
-  });
+  }); 
   });
