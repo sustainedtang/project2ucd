@@ -9,3 +9,4 @@ Compare median house prices by county.
 
 Use map API to create a heat/bubble map.
 
+Use math.js library to calculate average.
